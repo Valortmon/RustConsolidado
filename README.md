@@ -19,35 +19,8 @@ Este contrato es parte de mis proyectos en Código Futura. Permite:
   ## 🛠️ Tecnologías Usadas
 - **Rust** + **Soroban SDK 23.0.3**
 - **Stellar CLI**
-- **Stellar Testnet**
 - **Cargo** para gestión de dependencias
 - **WASM** para compilación de contratos
-
-## 📚 Recursos Consultados
-- [Soroban Rust SDK](https://soroban.stellar.org/docs/sdks/rust)
-- [Stellar CLI](https://soroban.stellar.org/docs/reference/cli)
-- [Soroban Docs](https://soroban.stellar.org/docs)
-- [Stellar Laboratory](https://laboratory.stellar.org)
-- [StellarExpert](https://stellar.expert)
-- [Friendbot](https://friendbot.stellar.org) - Mi amigo para pruebas en *testnet*
-- [Documentación oficial de Rust](https://www.rust-lang.org)
-- Guía de la Clase 4: `04-hello-tiburona.md`, `02-result-option.md`, `03-storage.md`
-
-## 🛠️ Instalación
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/proyectos-soroban.git
-   cd proyectos-soroban/hello-tiburona
-   ```
-2. Compila el contrato:
-   ```bash
-   soroban contract build
-   ```
-3. Ejecuta los tests:
-   ```bash
-   cargo test -- --lib
-   ```
 
 ## 🚀 Uso
 
@@ -63,7 +36,6 @@ El contrato está implementado en Rust con Soroban SDK 23.0.3. Genera un archivo
   - Transferencia de admin con `transfer_admin`.
   - Límite de caracteres configurable con `set_limite` y `LimiteCaracteres`.
   
-
 ## 🎯 Lo que Aprendí
 
 ### Rust + Soroban ✨
