@@ -101,7 +101,7 @@ El contrato está implementado en Rust con Soroban SDK 23.0.3. Genera un archivo
 1. **Clona el repositorio**:
    ```bash
    git clone https://github.com/Valortmon/RustConsolidado.git
-   cd Tarea-de-CODIGO-FUTURA/hello-tiburona
+   cd RustConsolidado/hello-tiburona
    ```
 
 2. **Compila el contrato**:
