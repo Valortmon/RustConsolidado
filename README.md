@@ -23,9 +23,18 @@ Este contrato es parte de mis proyectos en Código Futura. Permite:
 - **WASM** para compilación de contratos
 
   ## 📂 ¿Qué vas a encontrar?
-- **`src/lib.rs`** 🦀: Contrato Soroban que saluda con "Hola Tiburona", gestiona contadores totales y por usuario, permite transferir admin, y configura un límite de caracteres. Incluye **5 errores personalizados** y **5 claves de almacenamiento**.
-- **`Cargo.toml`** ⚙️: Configuración del proyecto para generar `hello-tiburona.wasm`.
+  
+- **`contracts/hello-tiburona`** 📁: Directorio principal del proyecto.
+  - **`src`** 📁:
+    - **`lib.rs`** 🦀: Contrato Soroban que saluda con "Hola Tiburona", gestiona contadores totales y por usuario, permite transferir admin, y configura un límite de caracteres. Incluye **5 errores personalizados** y **5 claves de almacenamiento**.
+    - **`test.rs`** 🧪: Archivo con **11 tests** que verifican la funcionalidad del contrato, incluyendo inicialización, validaciones, control de acceso, transferencia de admin, y límite de caracteres configurable.
+  - **`Cargo.toml`** ⚙️: Configuración del proyecto para generar `hello-tiburona.wasm`.
+  - **`Makefile`** 🛠️: Script para automatizar tareas de compilación, optimización y pruebas.
+  - **`.gitignore`** 🚫: Archivo para excluir archivos y directorios del control de versiones.
+  - **`Cargo.lock`** 🔒: Archivo generado automáticamente para fijar las versiones de las dependencias.
+- **`Cargo.toml`** ⚙️: Configuración raíz del proyecto.
 - **`README.md`** 📖: Esta documentación con todos los detalles del proyecto.
+- **`.gitignore`** 🚫: Archivo raíz para ignorar archivos y directorios en el repositorio.
 
 ## 🚀 Uso
 
