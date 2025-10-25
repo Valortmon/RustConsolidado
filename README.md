@@ -22,96 +22,14 @@ Este contrato es parte de mis proyectos en Código Futura. Permite:
 - **Cargo** para gestión de dependencias
 - **WASM** para compilación de contratos
 
-## 🚀 Uso
-
-El contrato está implementado en Rust con Soroban SDK 23.0.3. Genera un archivo WASM en `target/wasm32-unknown-unknown/release/hello-tiburona.wasm` para desplegar en la red Stellar.
-
-## 📋 Requisitos Cumplidos
-
-- **Implementación**: 5 errores personalizados, 5 claves de almacenamiento, funciones `initialize`, `hello`, `get_contador`, `get_ultimo_saludo`, `get_contador_usuario`, `reset_contador`, `transfer_admin`, `set_limite`.
-- **Tests**: 11 tests para inicialización, no reinicialización, saludos exitosos, validaciones, control de acceso, transferencia de admin, y límite configurable.
-- **Build**: Compila sin warnings, tests pasan, WASM generado y optimizado.
-- **Retos adicionales**:
-  - Estadísticas por usuario con `ContadorPorUsuario` y `get_contador_usuario`.
-  - Transferencia de admin con `transfer_admin`.
-  - Límite de caracteres configurable con `set_limite` y `LimiteCaracteres`.
-  
-## 🎯 Lo que Aprendí
-
-### Rust + Soroban ✨
-- Crear contratos inteligentes profesionales con **Soroban SDK**.
-- Manejar almacenamiento **instance** y **persistent** con `DataKey`.
-- Implementar **errores personalizados** y validaciones robustas.
-- Gestionar **TTL** para optimizar el almacenamiento.
-- Escribir **tests comprehensivos** para casos exitosos y de error.
-
-### Stellar CLI 🖥️
-- Compilar y optimizar archivos **WASM** para despliegue.
-- Invocar contratos localmente en *testnet*.
-- Automatizar tareas con comandos de **Soroban CLI**.
-- Navegar la documentación como una detective.
-
-### Pensamiento Crítico 🧠
-- Diseñar contratos seguros con **control de acceso**.
-- Depurar errores en el código (¡gracias por la corrección del bug de `Symbol`, Karen! 🦈).
-- Escribir documentación clara y profesional (¡como este README!).
-
-### Confianza 💪
-- Creer en mi capacidad para dominar **Rust** y **blockchain**.
-- Construir un contrato *production-ready* desde cero.
-- Visualizar mi futuro como **developer blockchain**.
-
----
-
-## 📂 ¿Qué vas a encontrar?
+  ## 📂 ¿Qué vas a encontrar?
 - **`src/lib.rs`** 🦀: Contrato Soroban que saluda con "Hola Tiburona", gestiona contadores totales y por usuario, permite transferir admin, y configura un límite de caracteres. Incluye **5 errores personalizados** y **5 claves de almacenamiento**.
 - **`Cargo.toml`** ⚙️: Configuración del proyecto para generar `hello-tiburona.wasm`.
 - **`README.md`** 📖: Esta documentación con todos los detalles del proyecto.
 
----
+## 🚀 Uso
 
-## 🚀 Instalación y Uso
-
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/Valortmon/Tarea-de-CODIGO-FUTURA.git
-   cd Tarea-de-CODIGO-FUTURA/hello-tiburona
-   ```
-
-2. **Compila el contrato**:
-   ```bash
-   soroban contract build
-   ```
-
-3. **Ejecuta los tests**:
-   ```bash
-   cargo test -- --lib
-   ```
-
-4. **Optimiza el WASM**:
-   ```bash
-   soroban contract optimize --wasm target/wasm32-unknown-unknown/release/hello-tiburona.wasm
-   ```
-
-5. **Prueba localmente**:
-   ```bash
-   soroban contract invoke \
-     --wasm target/wasm32-unknown-unknown/release/hello-tiburona.wasm \
-     --id test \
-     -- initialize \
-     --admin CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM
-   ```
-
-   ```bash
-   soroban contract invoke \
-     --wasm target/wasm32-unknown-unknown/release/hello-tiburona.wasm \
-     --id test \
-     -- hello \
-     --usuario CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M \
-     --nombre "Test"
-   ```
-
----
+El contrato está implementado en Rust con Soroban SDK 23.0.3. Genera un archivo WASM en `target/wasm32-unknown-unknown/release/hello-tiburona.wasm` para desplegar en la red Stellar.
 
 ## 📋 Requisitos Cumplidos
 
@@ -150,9 +68,74 @@ El contrato está implementado en Rust con Soroban SDK 23.0.3. Genera un archivo
 - Compila sin *warnings*.
 - Genera `hello-tiburona.wasm`.
 - Optimiza el archivo WASM para despliegue.
+  
+## 🎯 Lo que Aprendí
 
-### Corrección de Bug
-- Uso de `String` en lugar de `Symbol` para el parámetro `nombre` en `hello()` y tests, solucionando el problema con `.len()` y `.to_string()`.
+### Rust + Soroban ✨
+- Crear contratos inteligentes profesionales con **Soroban SDK**.
+- Manejar almacenamiento **instance** y **persistent** con `DataKey`.
+- Implementar **errores personalizados** y validaciones robustas.
+- Gestionar **TTL** para optimizar el almacenamiento.
+- Escribir **tests comprehensivos** para casos exitosos y de error.
+
+### Stellar CLI 🖥️
+- Compilar y optimizar archivos **WASM** para despliegue.
+- Invocar contratos localmente en *testnet*.
+- Automatizar tareas con comandos de **Soroban CLI**.
+- Navegar la documentación como una detective.
+
+### Pensamiento Crítico 🧠
+- Diseñar contratos seguros con **control de acceso**.
+- Depurar errores en el código (¡gracias por la corrección del bug de `Symbol`, Karen! 🦈).
+- Escribir documentación clara y profesional (¡como este README!).
+
+### Confianza 💪
+- Creer en mi capacidad para dominar **Rust** y **blockchain**.
+- Construir un contrato *production-ready* desde cero.
+- Visualizar mi futuro como **developer blockchain**.
+
+---
+
+## 🚀 Instalación y Uso
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/Valortmon/RustConsolidado.git
+   cd Tarea-de-CODIGO-FUTURA/hello-tiburona
+   ```
+
+2. **Compila el contrato**:
+   ```bash
+   soroban contract build
+   ```
+
+3. **Ejecuta los tests**:
+   ```bash
+   cargo test -- --lib
+   ```
+
+4. **Optimiza el WASM**:
+   ```bash
+   soroban contract optimize --wasm target/wasm32-unknown-unknown/release/hello-tiburona.wasm
+   ```
+
+5. **Prueba localmente**:
+   ```bash
+   soroban contract invoke \
+     --wasm target/wasm32-unknown-unknown/release/hello-tiburona.wasm \
+     --id test \
+     -- initialize \
+     --admin CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM
+   ```
+
+   ```bash
+   soroban contract invoke \
+     --wasm target/wasm32-unknown-unknown/release/hello-tiburona.wasm \
+     --id test \
+     -- hello \
+     --usuario CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M \
+     --nombre "Test"
+   ```
 
 ---
 
